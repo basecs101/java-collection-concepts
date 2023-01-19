@@ -13,13 +13,13 @@
    1. #### [HashMap](https://medium.com/@basecs101/internal-working-of-hashmap-in-java-latest-updated-4c2708f76d2c)
    2. #### LinkedHashMap
    3. #### [TreeMap](https://medium.com/@basecs101/treemap-in-java-collection-framework-interview-question-a3f81c7aaa84)
-6. HashTable
-7. Vector
-8. 
+6. ### HashTable
+7. ### Vector
+8. ### ArrayDeque
 9. ### Collections.sort(<List>) and Arrays.sort(<Array>)
 10. ### Comparator and Comparable Interfaces and their differences
 11. ### [HashMap and ConcurrentHashMap](https://medium.com/@basecs101/comparing-hashmap-and-concurrenthashmap-in-java-latest-98fc845ec70c)
 
 ## Collection flow diagram
 
-![collections.jpg](..%2F..%2FOneDrive%2FDesktop%2Fcollections.jpg)
+![Flow Diagram](collections.jpg)
