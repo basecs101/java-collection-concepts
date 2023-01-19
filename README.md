@@ -11,7 +11,7 @@
    3. #### TreeSet
 5. ### Map
    1. #### [HashMap](https://medium.com/@basecs101/internal-working-of-hashmap-in-java-latest-updated-4c2708f76d2c)
-   2. #### LinkedHashMap
+   2. #### [LinkedHashMap](https://medium.com/@basecs101/complete-guide-on-linkedhashmap-in-java-latest-a923833afde0)
    3. #### [TreeMap](https://medium.com/@basecs101/treemap-in-java-collection-framework-interview-question-a3f81c7aaa84)
 6. ### HashTable
 7. ### Vector
