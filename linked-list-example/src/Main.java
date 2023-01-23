@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,6 +24,11 @@ public class Main {
         newGuests.add("Nikita");
         newGuests.add("Anjali");
         guestList.addAll(newGuests);
+
+        System.out.println("List before sorting :");
+        guestList.forEach(name -> System.out.println(name));
+        Collections.sort(guestList);
+        System.out.println("List after sorting :");
         guestList.forEach(name -> System.out.println(name));
 
     }
