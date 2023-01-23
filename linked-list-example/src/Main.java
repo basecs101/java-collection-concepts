@@ -31,5 +31,9 @@ public class Main {
         System.out.println("List after sorting :");
         guestList.forEach(name -> System.out.println(name));
 
+//        immutableList = Collections.unmodifiableList(guestList);//immutable list//JDK8
+
+        List immutableList = List.of(newGuests);//JDK9//read only and not add/remove
+
     }
 }
