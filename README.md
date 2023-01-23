@@ -19,7 +19,7 @@
 9. ### Collections.sort(<List>) and Arrays.sort(<Array>)
 10. ### Comparator and Comparable Interfaces and their differences
 11. ### [HashMap and ConcurrentHashMap](https://medium.com/@basecs101/comparing-hashmap-and-concurrenthashmap-in-java-latest-98fc845ec70c)
-
+12. Immutable Collections in Java9
 ## Collection flow diagram
 
 ![Flow Diagram](collections.jpg)
