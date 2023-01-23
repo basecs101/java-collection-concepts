@@ -13,7 +13,8 @@ public class Main {
 
         guestList.forEach(name -> System.out.println(name));
 
-        System.out.println("Element at 0th index : "+ guestList.get(0));
+
+        System.out.println("Element at 2nd index : "+ guestList.get(1));
 
         System.out.println("Remove element from 0th index : "+ guestList.remove(0));
 
