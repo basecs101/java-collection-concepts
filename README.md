@@ -1,7 +1,10 @@
 # Java-Collection-Programs
 ### Having fun writing and exploring collection classes and their usage
 1. ### Stack
-2. ### Queue and Deque
+2. ### Queue
+   1. #### PriorityQueue
+   2. #### LinkedList (implements Deque)
+   3. #### ArrayDeque (implements Deque)
 3. ### List
    1. #### [ArrayList](https://medium.com/@basecs101/comparing-arraylist-and-linkedlist-in-java-latest-2b133b29489f)
    2. #### [LinkedList](https://medium.com/@basecs101/comparing-arraylist-and-linkedlist-in-java-latest-2b133b29489f)
