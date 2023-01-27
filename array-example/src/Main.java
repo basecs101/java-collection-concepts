@@ -8,8 +8,8 @@ public class Main {
         int[] oddNumber = new int[3];//declared
 
         oddNumber[0]=1;//init
-        oddNumber[1]=1;//init
-        oddNumber[2]=1;//init
+        oddNumber[1]=3;//init
+        oddNumber[2]=5;//init
 
         int[] firstFivePrimes = new int[]{2,3,5,7,11}; //declare and init
 

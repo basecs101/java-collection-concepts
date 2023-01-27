@@ -1,30 +1,17 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
-/**
- * HashMap : HashMap is a data structure that stores key, value pairs.
- * Internally it uses a Node data structure that has hash, key, value, next.
- * Before java8 HashMap was purely LinkedList based.
- * In Java8, this is modified to use LinkedList and Tree(AVL Tree).
- */
 public class Main {
     public static void main(String[] args) {
+        Map<String, Integer> cityPopulation = new TreeMap<>();
 
-        Map<String, Integer> cityPopulation = new HashMap<>();
+        cityPopulation.put("Pune",8000000);
+        cityPopulation.put("Mumbai",18000000);
+        cityPopulation.put("San Francisco",800000);
 
-        cityPopulation.put("Pune",1000000);
-        cityPopulation.put("Mumbai",1800000);
-        cityPopulation.put("NYC",1200000);
-        cityPopulation.put("London",400000);
+        cityPopulation.entrySet().forEach(stringIntegerEntry ->
+                System.out.println(stringIntegerEntry.getKey() + " "+stringIntegerEntry.getValue()));
 
-        System.out.println("Population of NYC is :" + cityPopulation.get("NYC"));
-
-
-        for (Map.Entry<String, Integer> entry : cityPopulation.entrySet()){
-            System.out.println("City Name : " + entry.getKey() + " Population : "+entry.getValue());
-        }
 
         for (Integer pop : cityPopulation.values()){
             System.out.println(pop);
@@ -59,5 +46,6 @@ public class Main {
         }
 
         System.out.println("Size of Map is : "+cityPopulation.size());
+
     }
 }

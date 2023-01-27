@@ -25,5 +25,8 @@ public class Main {
         System.out.println("After filter the stream elements are : ");
         stringStream.filter(name -> name.length() == 3)
                 .forEach(name -> System.out.println(name));
+
+        List list = List.of(guestList);//to create immutable list -->Java 9 feature.
+
     }
 }
