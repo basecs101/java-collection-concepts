@@ -24,6 +24,9 @@
 10. ### Comparator and Comparable Interfaces and their differences
 11. ### [HashMap and ConcurrentHashMap](https://medium.com/@basecs101/comparing-hashmap-and-concurrenthashmap-in-java-latest-98fc845ec70c)
 12. ### Immutable Collections in Java 9
-
+      1. > List.of(<list>) --> returns immutable List
+      #### > Use cases
+         1. While passing list as param to a method that doesn't modify it.
+         2. Use it when multiple threads are sharing the list and you want the same list to be used by all threads.
 ## Collection flow diagram
 ![Flow Diagram](collections.jpg)
