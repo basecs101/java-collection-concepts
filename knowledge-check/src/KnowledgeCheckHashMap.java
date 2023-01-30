@@ -9,6 +9,13 @@ class TestMap {
     @Override
     public boolean equals(Object obj) {
         return true;
+//        if (this == obj){
+//            return true;
+//        } else if (obj instanceof TestMap){
+//            return this.name.equals(((TestMap) obj).name);
+//        } else {
+//            return false;
+//        }
     }
 
     @Override
@@ -57,7 +64,7 @@ There are 3 Scenarios->
 
 Visualize it as below:-
 0[]
-1[] -->[1000h, "a"] --> [2000h,"b"]-->null
+1[] -->[1, 1000h, "a", 1234h] --> [1, 2000h,"b", null]
 2[]
 3[]
 4[]
@@ -75,10 +82,10 @@ In case of equals method is overridden and returns true all the time.
 1. hashMap.get(test3) --> no key present in the map -->returns null
 2. same for hashMap.get(test4) --> no key present in the map -->returns null
 
-put test1 -->
+put test1/1000h -->
 Visualize it as below:-
 0[]
-1[] -->[1000h, "a"]-->null
+1[] -->[1, 1000h, "a", null]
 2[]
 3[]
 4[]
@@ -86,10 +93,10 @@ Visualize it as below:-
 6[]
 7[]
 
-put test2 -->
+put test2/2000h -->
 Visualize it as below:-
 0[]
-1[] -->[2000h, "b"]-->null
+1[] -->[1, 1000h, "b", null]
 2[]
 3[]
 4[]
@@ -97,11 +104,11 @@ Visualize it as below:-
 6[]
 7[]
 
-now for hashMap.get(test3) --> hashCode(that is 1) is already present in the bucket and equals returns true.
+now for hashMap.get(test3/3000h) --> hashCode(that is 1) is already present in the bucket and equals returns true.
 Hence, it will return "b"
 Visualize it as below:-
 0[]
-1[] -->[2000h, "b"]-->null
+1[] -->[1, 1000h, "b", null]
 2[]
 3[]
 4[]
@@ -109,11 +116,11 @@ Visualize it as below:-
 6[]
 7[]
 
-now for hashMap.get(test4) --> hashCode(that is 1) is already present in the bucket and equals returns true.
+now for hashMap.get(test4/4000h) --> hashCode(that is 1) is already present in the bucket and equals returns true.
 Hence, it will return "b"
 Visualize it as below:-
 0[]
-1[] -->[2000h, "b"]-->null
+1[] -->[1, 1000h, "b", null]
 2[]
 3[]
 4[]
