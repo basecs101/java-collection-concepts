@@ -1,6 +1,11 @@
 # Java-Collection-Programs
 ### Having fun writing and exploring collection classes and their usage
 1. ### Stack
+    > The Stack class represents a last-in-first-out (LIFO) stack of objects. It extends class Vector with five operations that allow a vector to be treated as a stack. The usual push and pop operations are provided, as well as a method to peek at the top item on the stack, a method to test for whether the stack is empty, and a method to search the stack for an item and discover how far it is from the top.
+    When a stack is first created, it contains no items.
+    
+    > A more complete and consistent set of LIFO stack operations is provided by the Deque interface and its implementations, which should be used in preference to this class. For example:
+    Deque<Integer> stack = new ArrayDeque<Integer>();
 2. ### Queue
    1. #### PriorityQueue
 3. ### Deque
@@ -20,7 +25,12 @@
    3. #### [TreeMap](https://medium.com/@basecs101/treemap-in-java-collection-framework-interview-question-a3f81c7aaa84)
 7. ### HashTable
 8. ### Vector
-9. ### Collections.sort(List<E> list) and Arrays.sort(<Array>)
+    >    The Vector class implements a growable array of objects. Like an array, it contains components that can be accessed using an integer index. However, the size of a Vector can grow or shrink as needed to accommodate adding and removing items after the Vector has been created.
+    
+    >    Each vector tries to optimize storage management by maintaining a capacity and a capacityIncrement. The capacity is always at least as large as the vector size; it is usually larger because as components are added to the vector, the vector's storage increases in chunks the size of capacityIncrement. An application can increase the capacity of a vector before inserting a large number of components; this reduces the amount of incremental reallocation.
+
+    >    As of the Java 2 platform v1.2, this class was retrofitted to implement the List interface, making it a member of the Java Collections Framework. Unlike the new collection implementations, Vector is synchronized. If a thread-safe implementation is not needed, it is recommended to use ArrayList in place of Vector
+10. ### Collections.sort(List<E> list) and Arrays.sort(<Array>)
 10. ### Comparator and Comparable Interfaces and their differences
 11. ### [HashMap and ConcurrentHashMap](https://medium.com/@basecs101/comparing-hashmap-and-concurrenthashmap-in-java-latest-98fc845ec70c)
 12. ### Immutable Collections in Java 9
