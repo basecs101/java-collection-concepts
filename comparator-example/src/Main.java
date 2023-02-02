@@ -1,7 +1,6 @@
 import java.util.*;
-import java.util.stream.Collectors;
 
-class Employee implements Comparable<Employee>{
+class Employee {
     String name;
     int salary;
     int id;
@@ -36,6 +35,8 @@ class Employee implements Comparable<Employee>{
         this.id = id;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -57,25 +58,44 @@ class Employee implements Comparable<Employee>{
                 '}';
     }
 
+
+}
+class EmployeeComparatorBySalary implements Comparator<Employee> {
     @Override
-    public int compareTo(Employee o) {
-        return this.salary - o.salary;
+    public int compare(Employee o1, Employee o2) {
+        return o1.salary - o2.salary;
     }
 }
 
+class EmployeeComparatorById implements Comparator<Employee> {
+    @Override
+    public int compare(Employee o1, Employee o2) {
+        return o1.id - o2.id;
+    }
+}
 public class Main {
     public static void main(String[] args) {
-        List<Employee> list = new ArrayList<>();
-        list.add(new Employee("Vikram", 14000,10));
-        list.add(new Employee("Vikas",20000,20));
-        list.add(new Employee("Vivek",16000,5));
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee("Vikram", 14000,10));
+        employeeList.add(new Employee("Vikas",20000,20));
+        employeeList.add(new Employee("Vivek",16000,5));
 
-        //List<String> or List<Integer>
-        //To use Collections.sort(list of employees),  we must implement Comparable interface
-        // and provide definition for compareTo method and comparison parameters.
-        Collections.sort(list);
-        System.out.println(list);
+        /*
+        The lambda expression (o1, o2) -> o1.salary- o2.salary
+        This provides implementation for compare method of functional interface Comparator
+        The lambda has no name and doesn't belong to any class.
+        This lambda is in the form of (parameter1, parameter2) -> expression
+         */
+//        Collections.sort(employeeList, (o1, o2) -> o1.salary- o2.salary);
 
-        list.stream().sorted(Comparator.comparing(Employee::getSalary)).toList().forEach(System.out::println);
+        EmployeeComparatorBySalary employeeComparatorBySalary = new EmployeeComparatorBySalary();
+        Collections.sort(employeeList, employeeComparatorBySalary);
+
+//        EmployeeComparatorById employeeComparatorById = new EmployeeComparatorById();
+//        Collections.sort(employeeList, employeeComparatorById);
+
+        System.out.println(employeeList);
+
+//        employeeList.stream().sorted(Comparator.comparing(Employee::getSalary)).toList().forEach(System.out::println);
     }
 }
